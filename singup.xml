@@ -1,0 +1,9 @@
+<form action="" method="post">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" autocomplete="none"/>
+    <label for="email">E-mail</label>
+    <input type="email" id="email" email="email" autocomplete="off">
+    <label for="password">Password</label>
+    <input type="password" id="city" name="password" autocomplete="off">
+    <button class="btn btn-sub" type="submit">Register</button>
+</form>
