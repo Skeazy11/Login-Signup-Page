@@ -10,21 +10,19 @@ pageButtonsContainer.addEventListener("click", (e) => {
         if (e.target.classList.contains("sign-up")) {
             formContainer.classList.add("inv");
             updateForm("./singup.xml");
-            addAndRemoveClass(btnSignUp, "btn-active", "btn-notactive");
-            addAndRemoveClass(btnSignIn, "btn-notactive", "btn-active");
+            btnSignUp.classList.toggle("hidden");
+            window.setTimeout(() => { btnSignIn.classList.toggle("hidden");; }, 250);
             window.setTimeout(() => { formContainer.classList.remove("inv"); }, 250);
-
         }
         else if (e.target.classList.contains("sign-in")) {
             formContainer.classList.add("inv");
             updateForm("./signin.xml");
-            addAndRemoveClass(btnSignUp, "btn-notactive", "btn-active");
-            addAndRemoveClass(btnSignIn, "btn-active", "btn-notactive");
+            btnSignIn.classList.toggle("hidden");
+            window.setTimeout(() => { btnSignUp.classList.toggle("hidden");; }, 250);
             window.setTimeout(() => { formContainer.classList.remove("inv"); }, 250);
         }
     }
 })
-
 
 function updateForm(form) {
     let xmlhttp = new XMLHttpRequest();
@@ -48,7 +46,9 @@ function addAndRemoveClass(element, addedClass, removedClass) {
 window.onload = () => {
     updateForm("./signin.xml");
     window.setTimeout(() => { formFormContainer.classList.remove("inv"); }, 250);
+    window.setTimeout(() => { btnSignUp.classList.remove("hidden"); }, 250);
 }
+
 
 
 

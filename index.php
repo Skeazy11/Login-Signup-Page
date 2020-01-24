@@ -15,8 +15,8 @@
 <body>
     <main>
         <div class="page">
-            <button class="btn mr sign-in btn-active">Sign-in</button>
-            <button class="btn mr sign-up btn-notactive">Sign-up</button>
+            <button class="btn-page mr sign-in btn-active hidden">Sign-in</button>
+            <button class="btn-page mr sign-up btn-notactive hidden">Sign-up</button>
         </div>
 
         <div class="form-form-container inv">

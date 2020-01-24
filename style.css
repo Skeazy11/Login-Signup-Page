@@ -1,3 +1,9 @@
+:root {
+    --mainWidth: 55%;
+    --mainHeight: 100%;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -15,14 +21,14 @@ body {
 }
 
 main {
-    width: 80%;
-    height: 100%;
+    width: var(--mainWidth);
+    height: var(--mainHeight);
     display: grid;
-    grid-template-rows: 0.2fr 0.8fr;
+    grid-template-rows: 0.1fr 0.9fr;
     background-color: rgb(31, 31, 31);
     font-family: 'Josefin Sans', sans-serif;
     box-shadow: 15px 20px 20px 0px #000000a1;
-    border-radius: 24rem 0;
+    /* border-radius: 24rem 0; */
 }
 
 .page {
@@ -42,15 +48,32 @@ main {
     border-radius: 50px;
     font-size: 1rem;
     outline: none;
-    transition: background-color 250ms;
+    transition: background-color 500ms ease;
+}
+
+.btn-page {
+    height: 2rem;
+    width: 5rem;
+    border: none;
+    color: orange;
+    background: transparent;
+    border-bottom: 2px solid orange;
+    cursor: pointer;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1rem;
+    outline: none;
+    opacity: 1;
+    transition: opacity 250ms, color 200ms, border-color 200ms;
+    position: absolute;
 }
 
 .btn:hover {
-    background-color: #a9dfff;
+    background-color: #e3ec5a;
 }
 
-.mr {
-    margin-right: 1rem;
+.btn-page:hover {
+    color: #e3ec5a;
+    border-color: #e3ec5a;
 }
 
 .form-form-container {
@@ -78,7 +101,7 @@ form {
 
 label {
     color: orange;
-    font-size: 2rem;
+    font-size: 1.2rem;
     margin-top: 1rem;
 }
 
@@ -90,7 +113,14 @@ input {
     border-bottom: 1px solid orange;
     color: white;
     outline: none;
-    font-size: 1.7rem;
+    font-size: 1rem;
+    margin-top: -2rem;
+    transition: margin 200ms ease;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+input:focus, input:valid {
+    margin-top: 0rem;
 }
 
 .btn-sub {
@@ -102,16 +132,144 @@ input {
     display: none;
 }
 
-
-.btn-active {
-    background: rgb(212, 157, 55);
-}
-
-.btn-notactive {
-    background: rgba(212, 157, 55, 0.527);
-}
-
 .inv {
     opacity: 0;
 }
 
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+}
+
+/* iPhone 4 */
+@media only screen and (min-width: 315px) and (min-height: 475px) {
+    :root {
+        --mainWidth: 95%;
+        --mainHeight: 95%;
+        font-size: 13px;
+    }
+
+    body {
+        padding: 0rem;
+    }
+} 
+
+/* iPhone 5/SE */
+@media only screen and (min-width: 315px) and (min-height: 560px) {
+    :root {
+        --mainWidth: 100%;
+        --mainHeight: 75%;
+        font-size: 12px;
+    }
+
+    body {
+        padding: 1rem;
+    }
+} 
+
+/* iPhone 6/7/8 */
+@media only screen and (min-width: 370px) and (min-height: 650px) {
+    :root {
+        --mainWidth: 100%;
+        font-size: 14px;
+    }
+
+    body {
+        padding: 1rem;
+    }
+} 
+
+/* iPhone X/XS */
+@media only screen and (min-width: 370px) and (min-height: 800px) {
+    :root {
+        --mainWidth: 100%;
+        --mainHeight: 75%;
+        font-size: 13px;
+    }
+
+    body {
+        padding: 3rem;
+    }
+
+}
+
+/* iPhone 6/7/8 Plus */
+@media only screen and (max-width: 410px) and (min-height: 730px) {
+    :root {
+        --mainWidth: 100%;
+        --mainHeight: 80%;
+    }
+
+    body {
+        padding: 1rem;
+    }
+} 
+
+/* Galaxy Note 9 */
+@media only screen and (min-width: 410px) and (min-height: 830px) {
+    :root {
+        --mainWidth: 100%;
+        --mainHeight: 75%;
+        font-size: 14px;
+    }
+
+    body {
+        padding: 2rem;
+    }
+} 
+
+/* iPad Mini */
+
+@media only screen and (min-width: 750px) and (min-height: 1000px) {
+    :root {
+        --mainWidth: 100%;
+        --mainHeight: 75%;
+        font-size: 16px;
+    }
+
+    body {
+        padding: 5rem;
+    }
+} 
+
+/* iPad Pro */
+
+@media only screen and (min-width: 1020px) and (min-height: 1330px) {
+    :root {
+        --mainWidth: 100%;
+        --mainHeight: 85%;
+        font-size: 25px;
+    }
+
+    body {
+        padding: 5rem;
+    }
+} 
+
+/* 720p */
+
+@media only screen and (min-width: 1270px) and (min-height: 720px) {
+    :root {
+        --mainWidth: 70%;
+        --mainHeight: 80%;
+        font-size: 16px;
+    }
+
+    body {
+        padding: 4rem;
+    }
+} 
+
+/* Laptop */
+@media only screen and (min-width: 1260px) and (min-height: 800px) {
+    :root {
+        --mainWidth: 65%;
+        --mainHeight: 100%;
+        font-size: 16px;
+    }
+
+    body {
+        padding: 5rem;
+    }
+} 
