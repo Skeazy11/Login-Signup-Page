@@ -143,7 +143,7 @@ input:focus, input:valid {
 }
 
 /* iPhone 4 */
-@media only screen and (min-width: 315px) and (min-height: 475px) {
+@media only screen and (min-width: 315px) and (min-height: 300px) {
     :root {
         --mainWidth: 95%;
         --mainHeight: 95%;
