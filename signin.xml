@@ -1,7 +1,0 @@
-<form action="" method="post">
-    <label for="email">E-mail</label>
-    <input type="test" id="email" name="email" autocomplete="off" required="required">
-    <label for="password">Password</label>
-    <input type="password" id="city" name="password" autocomplete="off" required="required">
-    <button class="btn btn-sub" type="submit">Login</button>
-</form>
